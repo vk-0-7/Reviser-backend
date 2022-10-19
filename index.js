@@ -144,7 +144,7 @@ app.get('https://reviser-app.herokuapp.com/getsynonyms',async(req,res) =>{
 })
 
 app.get('/',(req,res) => {
-     res.json("server start")
+     res.json("server get started")
 })
 
 
