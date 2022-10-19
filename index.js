@@ -143,7 +143,9 @@ app.get('/getsynonyms',async(req,res) =>{
     }
 })
 
-
+app.get('/',(req,res) => {
+     res.json("server start")
+})
 
 
 
