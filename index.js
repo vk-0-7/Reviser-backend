@@ -10,7 +10,7 @@ app.use(express.json())
 app.use(express.urlencoded())
 app.use(cors())
 
-const DB='mongodb+srv://vivek:ramlaxman@cluster0.bqeym.mongodb.net/Reviser?retryWrites=true&w=majority'
+const DB= process.env.DATABASE;
 
 mongoose.connect(DB,{
     usenewUrlParser:true,
