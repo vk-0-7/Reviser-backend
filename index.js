@@ -33,7 +33,7 @@ const User=new mongoose.model('User',userSchema)
 
 
 
-app.post("/login" ,(req,res) =>{
+app.post("https://reviser-app.herokuapp.com/login" ,(req,res) =>{
     const {email,password} =req.body
     User.findOne({email:email} ,(err,user) =>{
         if(user){
@@ -52,7 +52,7 @@ app.post("/login" ,(req,res) =>{
 
                 //Register
 
-app.post("/register" ,(req,res) =>{  
+app.post("https://reviser-app.herokuapp.com/register" ,(req,res) =>{  
   const {username,name ,email,password} = req.body
   User.findOne({
       email:email
@@ -87,7 +87,7 @@ const userschema=new mongoose.Schema({
 })
 const Dictionary=new mongoose.model('Dictionary',userschema)
 
-app.post('/addantonyms',(req,res) =>{
+app.post('https://reviser-app.herokuapp.com/addantonyms',(req,res) =>{
     const {word,antonym,email}=req.body
     
     const dictionary=new Dictionary({
@@ -100,7 +100,7 @@ app.post('/addantonyms',(req,res) =>{
 
 })
 
-app.get('/getantonyms',async(req,res) =>{
+app.get('https://reviser-app.herokuapp.com/getantonyms',async(req,res) =>{
     try {
 
         const antData=await Dictionary.find();
@@ -119,7 +119,7 @@ const Userschema=new mongoose.Schema({
 })
 const Synonym=new mongoose.model('Synonym',Userschema)
 
-app.post('/addsynonyms',(req,res)=>{
+app.post('https://reviser-app.herokuapp.com/addsynonyms',(req,res)=>{
     const{word,synonym,email}=req.body
 
     const synonyms=new Synonym({
@@ -132,7 +132,7 @@ app.post('/addsynonyms',(req,res)=>{
     })
 })
 
-app.get('/getsynonyms',async(req,res) =>{
+app.get('https://reviser-app.herokuapp.com/getsynonyms',async(req,res) =>{
     try {
 
         const synData=await Synonym.find();
