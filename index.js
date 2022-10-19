@@ -10,7 +10,7 @@ app.use(express.json())
 app.use(express.urlencoded())
 app.use(cors())
 
-const DB=process.env.DATABA
+const DB=process.env.DATABASE
 
 mongoose.connect(DB,{
     usenewUrlParser:true,
