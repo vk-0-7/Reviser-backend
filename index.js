@@ -28,11 +28,6 @@ const userSchema=new mongoose.Schema({
 const User=new mongoose.model('User',userSchema)
 
 
-
-
-
-
-
 app.post("https://reviser-app.herokuapp.com/login" ,(req,res) =>{
     const {email,password} =req.body
     User.findOne({email:email} ,(err,user) =>{
