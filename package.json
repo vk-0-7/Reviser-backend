@@ -1,20 +1,29 @@
 {
   "name": "backend",
   "version": "1.0.0",
+  "type":"module",
   "description": "",
   "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-     "start": "node index.js"
-  },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "mongoose": "^6.5.4",
     "nodemon": "^2.0.19"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vk-0-7/Reviser-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vk-0-7/Reviser-backend/issues"
+  },
+  "homepage": "https://github.com/vk-0-7/Reviser-backend#readme"
 }

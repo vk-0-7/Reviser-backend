@@ -1,8 +1,11 @@
+
 import express from 'express'
 import mongoose from'mongoose'
 import cors from 'cors'
 import dotenv from "dotenv";
 dotenv.config();
+const DATABASE=process.env.DATABASE;
+// const BASE_URL=process.env.BASE_URL;
 
 
 const app=express();
@@ -10,9 +13,11 @@ app.use(express.json())
 app.use(express.urlencoded())
 app.use(cors())
 
-const DB= process.env.DATABASE
 
-mongoose.connect(DB,{
+
+
+
+mongoose.connect(DATABASE,{
     usenewUrlParser:true,
     useUnifiedTopology:true
 },()=>{console.log("connected to DB");})
@@ -30,6 +35,7 @@ const User=new mongoose.model('User',userSchema)
 
 app.post("/login" ,(req,res) =>{
     const {email,password} =req.body
+    console.log(email,password)
     User.findOne({email:email} ,(err,user) =>{
         if(user){
             if(password===user.password){
@@ -139,7 +145,7 @@ app.get('/getsynonyms',async(req,res) =>{
 })
 
 app.get('/',(req,res) => {
-     res.json("server get started")
+     res.json("server getting started on localhost")
 })
 
 
