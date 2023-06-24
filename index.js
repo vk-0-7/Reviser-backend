@@ -18,12 +18,12 @@ app.use(cors())
 let startword=0;
 
 
-const timeInterval = 10*1000;
+const timeInterval = 24*60*60*1000;
 
-// setInterval(function () {
-//   sendmail();
+setInterval(function () {
+  sendmail();
 
-// }, timeInterval);
+}, timeInterval);
 
 const sendmail=async(req,res)=>{
     try { 
