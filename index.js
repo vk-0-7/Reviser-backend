@@ -20,7 +20,7 @@ app.use(cors())
 let startword=0;
 
 
-const timeInterval = 10*60*1000;
+const timeInterval = 5*60*1000;
 
 setInterval(function () {
   sendmail();
