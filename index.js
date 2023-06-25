@@ -5,6 +5,8 @@ import cors from 'cors'
 import dotenv from "dotenv";
 dotenv.config();
 const DATABASE=process.env.DATABASE;
+const EMAIL=process.env.EMAIL;
+const PASSWORD=process.env.PASSWORD;
 import nodemailer from 'nodemailer'
 // const BASE_URL=process.env.BASE_URL;
 
@@ -18,7 +20,7 @@ app.use(cors())
 let startword=0;
 
 
-const timeInterval = 30*60*1000;
+const timeInterval = 10*60*1000;
 
 setInterval(function () {
   sendmail();
@@ -55,8 +57,8 @@ const sendmail=async(req,res)=>{
         const transporter=nodemailer.createTransport({
            service:"gmail",
            auth:{
-             user:process.env.EMAIL,
-             pass:process.env.PASSWORD
+             user:EMAIL,
+             pass:PASSWORD
            }
         });
 
