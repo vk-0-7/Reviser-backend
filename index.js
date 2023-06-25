@@ -23,14 +23,14 @@ let startword=0;
 const timeInterval = 2*60*1000;
 
 setInterval(function () {
-//   sendmail();
-   demo();
+  sendmail();
+//    demo();
 
 }, timeInterval);
 
-const demo=()=>{
-     console.log('demo file running');
-}
+// const demo=()=>{
+//      console.log('demo file running');
+// }
  
 
 const sendmail=async(req,res)=>{
