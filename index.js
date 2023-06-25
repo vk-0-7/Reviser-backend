@@ -99,7 +99,7 @@ const sendmail=async(req,res)=>{
       console.log(error)
    }
 
-   startword+=4;
+   startword+=2;
 }
 
 
