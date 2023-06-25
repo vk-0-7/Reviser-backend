@@ -169,38 +169,27 @@ app.post("/register" ,(req,res) =>{
          console.log(email);
         
 
-
-
-
-
-
-
-
-
-
-
-
     //   console.log(email);
-    //     Subscribe.findOne({email:email},(err,user)=>{
-    //         if(user){
-    //             res.send({message:"user already subscribed"})
-    //         }
-    //         else{
-    //             const subscribe=new Subscribe({email})
-    //             subscribe.save(err=>{
-    //                 if(err){
-    //                     res.send(err)
-    //                 }
-    //                 else{
-    //                     res.send({ message :"Successfully Subscribed "})
-    //                 }
-    //             })
-    //         }
-    //     }
+        Subscribe.findOne({email:email},(err,user)=>{
+            if(user){
+                res.send({message:"user already subscribed"})
+            }
+            else{
+                const subscribe=new Subscribe({email})
+                subscribe.save(err=>{
+                    if(err){
+                        res.send(err)
+                    }
+                    else{
+                        res.send({ message :"Successfully Subscribed "})
+                    }
+                })
+            }
+        }
         
         
         
-    //     )
+        )
 
        })
 
