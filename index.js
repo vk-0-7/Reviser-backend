@@ -20,7 +20,7 @@ app.use(cors())
 let startword=0;
 
 
-const timeInterval = 2*60*1000;
+const timeInterval = 30*60*1000;
 
 setInterval(function () {
   sendmail();
@@ -40,7 +40,12 @@ const sendmail=async(req,res)=>{
         // console.log(antData[0].email)
         const allantData=await AdAntonym.find();
         const allsynData=await AdSynonym.find();
-        
+        console.log(allantData.length);
+        console.log(startword);
+        if(startword+2>allantData.length || startword+2>allsynData.length){
+            startword=0;
+        }
+        console.log(startword)
         
         const filtereddata=allantData.slice(startword,startword+2)
         const filtereddata2=allsynData.slice(startword,startword+2)
@@ -50,12 +55,12 @@ const sendmail=async(req,res)=>{
           <body>
                
             <h1> Here are 1 antonyms of the day</h1>
-            <h3>${filtereddata[0].word}:${filtereddata[0].antonym}</h3>
-            <h3>${filtereddata[1].word}:${filtereddata[1].antonym}</h3>
+            <h3>${filtereddata[0]?.word}:${filtereddata[0]?.antonym}</h3>
+            <h3>${filtereddata[1]?.word}:${filtereddata[1]?.antonym}</h3>
             <br/>
              <h1> Here are 1 synonym of the day</h1>
-             <h3>${filtereddata2[0].word}:${filtereddata2[0].synonym}</h3>
-             <h3>${filtereddata2[1].word}:${filtereddata2[1].synonym}</h3>
+             <h3>${filtereddata2[0]?.word}:${filtereddata2[0]?.synonym}</h3>
+             <h3>${filtereddata2[1]?.word}:${filtereddata2[1]?.synonym}</h3>
           </body>
         </html>
       `;
@@ -91,10 +96,10 @@ const sendmail=async(req,res)=>{
 
    } catch (error) {
     //   res.status(401).json({status:401,error})
-    //   console.log(error)
+      console.log(error)
    }
 
-   startword+=1;
+   startword+=4;
 }
 
 
