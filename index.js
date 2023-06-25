@@ -20,12 +20,18 @@ app.use(cors())
 let startword=0;
 
 
-const timeInterval = 5*60*1000;
+const timeInterval = 2*60*1000;
 
 setInterval(function () {
-  sendmail();
+//   sendmail();
+   demo();
 
 }, timeInterval);
+
+const demo=()=>{
+     console.log('demo file running');
+}
+ 
 
 const sendmail=async(req,res)=>{
     try { 
