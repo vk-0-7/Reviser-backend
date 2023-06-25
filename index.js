@@ -20,7 +20,7 @@ app.use(cors())
 let startword=0;
 
 
-const timeInterval = 30*60*1000;
+const timeInterval = 30*1000;
 
 setInterval(function () {
   sendmail();
@@ -54,11 +54,11 @@ const sendmail=async(req,res)=>{
         <html>
           <body>
                
-            <h1> Here are 1 antonyms of the day</h1>
+            <h2> Here are 2 antonyms of the day</h2>
             <h3>${filtereddata[0]?.word}:${filtereddata[0]?.antonym}</h3>
             <h3>${filtereddata[1]?.word}:${filtereddata[1]?.antonym}</h3>
             <br/>
-             <h1> Here are 1 synonym of the day</h1>
+             <h2> Here are 2 synonym of the day</h2>
              <h3>${filtereddata2[0]?.word}:${filtereddata2[0]?.synonym}</h3>
              <h3>${filtereddata2[1]?.word}:${filtereddata2[1]?.synonym}</h3>
           </body>
