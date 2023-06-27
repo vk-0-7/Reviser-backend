@@ -17,10 +17,10 @@ app.use(express.urlencoded())
 app.use(cors())
 
 
-let startword=0;
+// let startword=0;
 
 
-const timeInterval = 20*60*1000;
+const timeInterval = 5*60*60*1000;
 
 setInterval(function () {
   sendmail();
@@ -34,18 +34,21 @@ setInterval(function () {
  
 
 const sendmail=async(req,res)=>{
+    const lastIndex=await Index.find();
+    let startword=lastIndex[lastIndex.length-1]?.num;
     try { 
         console.log('sendmail called');
         const recipients=await Subscribe.find();  
+       
         // console.log(antData[0].email)
         const allantData=await AdAntonym.find();
         const allsynData=await AdSynonym.find();
         console.log(allantData.length);
-        console.log(startword);
+        // console.log(startword);
         if(startword+2>allantData.length || startword+2>allsynData.length){
             startword=0;
         }
-        console.log(startword)
+        // console.log(startword)
         
         const filtereddata=allantData.slice(startword,startword+2)
         const filtereddata2=allsynData.slice(startword,startword+2)
@@ -96,10 +99,14 @@ const sendmail=async(req,res)=>{
 
    } catch (error) {
     //   res.status(401).json({status:401,error})
-      console.log(error)
+      console.log(' error occured in email send function',error)
    }
 
    startword+=2;
+
+getIndex(startword)
+
+   
 }
 
 
@@ -109,6 +116,32 @@ mongoose.connect(DATABASE,{
     usenewUrlParser:true,
     useUnifiedTopology:true
 },()=>{console.log("connected to DB");})
+
+
+
+
+const indexSchema=new mongoose.Schema({
+    num:Number,
+ })
+ 
+ const Index=new mongoose.model('Index',indexSchema)
+ 
+
+const getIndex=(currval)=>{
+    const index=new Index({num:currval})
+ 
+    index.save((error, savedUser) => {
+       if (error) {
+         console.error(error);
+       } else {
+         console.log('index set successfully:');
+       }
+     });
+}
+
+
+//  const num=startword;
+ 
 
 
 const userSchema=new mongoose.Schema({
