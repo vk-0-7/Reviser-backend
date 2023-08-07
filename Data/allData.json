@@ -1,0 +1,731 @@
+[
+    {
+      "id": 1,
+      "word": "Abundant",
+      "meaning": "Present in great quantity; plentiful.",
+      "antonym": "Scarce",
+      "synonym": "Ample",
+      "example": "The garden is abundant with colorful flowers."
+    },
+    {
+      "id": 2,
+      "word": "Benevolent",
+      "meaning": "Kind and generous.",
+      "antonym": "Malevolent",
+      "synonym": "Generous",
+      "example": "The benevolent stranger donated money to the charity."
+    },
+    {
+      "id": 3,
+      "word": "Capricious",
+      "meaning": "Given to sudden and unaccountable changes of mood or behavior.",
+      "antonym": "Consistent",
+      "synonym": "Whimsical",
+      "example": "Her capricious nature made it difficult to predict her reactions."
+    },
+    {
+      "id": 4,
+      "word": "Diligent",
+      "meaning": "Showing careful and persistent effort.",
+      "antonym": "Lazy",
+      "synonym": "Industrious",
+      "example": "The diligent student studied for hours every day."
+    },
+    {
+      "id": 5,
+      "word": "Eloquent",
+      "meaning": "Fluent or persuasive in speaking or writing.",
+      "antonym": "Inarticulate",
+      "synonym": "Articulate",
+      "example": "The politician delivered an eloquent speech that moved the audience."
+    },
+    {
+      "id": 6,
+      "word": "Formidable",
+      "meaning": "Inspiring fear or respect through being impressively powerful or capable.",
+      "antonym": "Easy",
+      "synonym": "Daunting",
+      "example": "The team faced a formidable opponent in the championship match."
+    },
+    {
+      "id": 7,
+      "word": "Gregarious",
+      "meaning": "Fond of company; sociable.",
+      "antonym": "Introverted",
+      "synonym": "Sociable",
+      "example": "John is a gregarious person who enjoys attending parties."
+    },
+    {
+      "id": 8,
+      "word": "Hypothetical",
+      "meaning": "Based on or serving as a hypothesis; assumed or supposed.",
+      "antonym": "Actual",
+      "synonym": "Speculative",
+      "example": "Let's consider a hypothetical situation where money is no object."
+    },
+    {
+      "id": 9,
+      "word": "Impartial",
+      "meaning": "Treating all parties equally; fair and just.",
+      "antonym": "Biased",
+      "synonym": "Unbiased",
+      "example": "The judge remained impartial throughout the trial."
+    },
+    {
+      "id": 10,
+      "word": "Jovial",
+      "meaning": "Cheerful and friendly.",
+      "antonym": "Gloomy",
+      "synonym": "Merry",
+      "example": "The jovial host greeted each guest with a warm smile."
+    },
+    {
+      "id": 11,
+      "word": "Keen",
+      "meaning": "Having or showing eagerness or enthusiasm.",
+      "antonym": "Indifferent",
+      "synonym": "Enthusiastic",
+      "example": "She has a keen interest in photography."
+    },
+    {
+      "id": 12,
+      "word": "Lucid",
+      "meaning": "Clear and easily understood; rational and sane.",
+      "antonym": "Confused",
+      "synonym": "Clear",
+      "example": "The professor gave a lucid explanation of the complex topic."
+    },
+    {
+      "id": 13,
+      "word": "Meticulous",
+      "meaning": "Showing great attention to detail; thorough.",
+      "antonym": "Careless",
+      "synonym": "Precise",
+      "example": "The artist's meticulous brushstrokes brought the painting to life."
+    },
+    {
+      "id": 14,
+      "word": "Novel",
+      "meaning": "New, original, and different from what has been known before.",
+      "antonym": "Familiar",
+      "synonym": "Innovative",
+      "example": "The author's novel approach to storytelling captivated readers."
+    },
+    {
+      "id": 15,
+      "word": "Obsolete",
+      "meaning": "No longer in use or outdated.",
+      "antonym": "Current",
+      "synonym": "Outdated",
+      "example": "The old typewriter became obsolete with the advent of computers."
+    },
+    {
+      "id": 16,
+      "word": "Pensive",
+      "meaning": "Engaged in deep or serious thought.",
+      "antonym": "Carefree",
+      "synonym": "Thoughtful",
+      "example": "The pensive student stared out the window, contemplating the question."
+    },
+    {
+      "id": 17,
+      "word": "Quaint",
+      "meaning": "Attractively unusual or old-fashioned.",
+      "antonym": "Modern",
+      "synonym": "Charming",
+      "example": "The village was known for its quaint cottages and narrow streets."
+    },
+    {
+      "id": 18,
+      "word": "Resilient",
+      "meaning": "Able to withstand or recover quickly from difficult conditions.",
+      "antonym": "Fragile",
+      "synonym": "Strong",
+      "example": "Despite setbacks, she remained resilient and continued pursuing her goals."
+    },
+    {
+      "id": 19,
+      "word": "Serene",
+      "meaning": "Calm, peaceful, and untroubled.",
+      "antonym": "Chaotic",
+      "synonym": "Tranquil",
+      "example": "The serene lake provided a perfect spot for meditation."
+    },
+    {
+      "id": 20,
+      "word": "Tenacious",
+      "meaning": "Persistent and determined to hold on or achieve something.",
+      "antonym": "Weak",
+      "synonym": "Persistent",
+      "example": "The tenacious climber reached the mountain summit against all odds."
+    },
+     {
+          "id": 21,
+          "word": "Ubiquitous",
+          "meaning": "Present, appearing, or found everywhere.",
+          "antonym": "Rare",
+          "synonym": "Omnipresent",
+          "example": "Smartphones have become ubiquitous in modern society."
+        },
+        {
+          "id": 22,
+          "word": "Voracious",
+          "meaning": "Having a very eager approach to an activity, often eating or consuming food in great quantities.",
+          "antonym": "Indifferent",
+          "synonym": "Insatiable",
+          "example": "The voracious reader finished the entire book series in a week."
+        },
+        {
+          "id": 23,
+          "word": "Wary",
+          "meaning": "Feeling or showing caution about possible dangers or problems.",
+          "antonym": "Trustful",
+          "synonym": "Cautious",
+          "example": "She was wary of strangers approaching her in the dark alley."
+        },
+        {
+          "id": 24,
+          "word": "Xenophobia",
+          "meaning": "An intense or irrational dislike or fear of people from other countries or cultures.",
+          "antonym": "Open-mindedness",
+          "synonym": "Racism",
+          "example": "Xenophobia can lead to harmful discrimination and prejudice."
+        },
+        {
+          "id": 25,
+          "word": "Yearn",
+          "meaning": "To have an intense feeling of longing for something, typically something that one has lost or been separated from.",
+          "antonym": "Refrain",
+          "synonym": "Long",
+          "example": "He yearned for the days when he was a carefree child."
+        },
+        {
+          "id": 26,
+          "word": "Zest",
+          "meaning": "Great enthusiasm and energy.",
+          "antonym": "Apathy",
+          "synonym": "Zeal",
+          "example": "She tackled every task with zest and determination."
+        },
+        {
+          "id": 27,
+          "word": "Amiable",
+          "meaning": "Having a friendly and pleasant manner.",
+          "antonym": "Hostile",
+          "synonym": "Affable",
+          "example": "The amiable neighbor always greeted everyone with a smile."
+        },
+        {
+          "id": 28,
+          "word": "Blissful",
+          "meaning": "Extremely happy or joyful.",
+          "antonym": "Miserable",
+          "synonym": "Euphoric",
+          "example": "The couple spent a blissful day at the beach, soaking up the sun."
+        },
+        {
+          "id": 29,
+          "word": "Cacophony",
+          "meaning": "A harsh, discordant mixture of sounds.",
+          "antonym": "Harmony",
+          "synonym": "Noise",
+          "example": "The busy street was filled with a cacophony of car horns and construction noises."
+        },
+        {
+          "id": 30,
+          "word": "Debilitate",
+          "meaning": "To make someone weak and infirm.",
+          "antonym": "Strengthen",
+          "synonym": "Weaken",
+          "example": "The illness debilitated her to the point where she couldn't leave her bed."
+        },
+        
+            {
+              "id": 31,
+              "word": "Ephemeral",
+              "meaning": "Lasting for a very short time; transient.",
+              "antonym": "Permanent",
+              "synonym": "Fleeting",
+              "example": "The beauty of the cherry blossoms is ephemeral, as they bloom for only a few weeks."
+            },
+            {
+              "id": 32,
+              "word": "Furtive",
+              "meaning": "Attempting to avoid notice or attention, typically because of guilt or a belief that discovery would lead to trouble.",
+              "antonym": "Open",
+              "synonym": "Sneaky",
+              "example": "He cast a furtive glance at the closed door before entering the room."
+            },
+            {
+              "id": 33,
+              "word": "Galvanize",
+              "meaning": "To shock or excite someone, typically into taking action.",
+              "antonym": "Calm",
+              "synonym": "Stimulate",
+              "example": "The inspiring speech galvanized the audience to work towards a common goal."
+            },
+            {
+              "id": 34,
+              "word": "Hapless",
+              "meaning": "Unfortunate; having bad luck.",
+              "antonym": "Fortunate",
+              "synonym": "Unlucky",
+              "example": "The hapless traveler missed all of his flights due to a series of delays."
+            },
+            {
+              "id": 35,
+              "word": "Iconoclast",
+              "meaning": "A person who challenges or criticizes traditional beliefs or institutions.",
+              "antonym": "Conformist",
+              "synonym": "Rebel",
+              "example": "The artist was known as an iconoclast for his controversial and unconventional works."
+            },
+            {
+              "id": 36,
+              "word": "Jubilant",
+              "meaning": "Feeling or expressing great joy and triumph.",
+              "antonym": "Sad",
+              "synonym": "Ecstatic",
+              "example": "The team was jubilant after winning the championship."
+            },
+            {
+              "id": 37,
+              "word": "Kaleidoscope",
+              "meaning": "A constantly changing pattern or sequence of elements.",
+              "antonym": "Monotony",
+              "synonym": "Variety",
+              "example": "The city's cultural diversity creates a kaleidoscope of experiences."
+            },
+            {
+              "id": 38,
+              "word": "Lethargic",
+              "meaning": "Feeling a lack of energy or enthusiasm; sluggish.",
+              "antonym": "Energetic",
+              "synonym": "Drowsy",
+              "example": "After a long day of work, he felt lethargic and unmotivated to do anything."
+            },
+            {
+              "id": 39,
+              "word": "Munificent",
+              "meaning": "Very generous; giving in a lavish or bountiful manner.",
+              "antonym": "Stingy",
+              "synonym": "Magnanimous",
+              "example": "The munificent philanthropist donated a large sum to various charitable causes."
+            },
+            {
+              "id": 40,
+              "word": "Nefarious",
+              "meaning": "Wicked, villainous, or criminal.",
+              "antonym": "Virtuous",
+              "synonym": "Evil",
+              "example": "The mastermind behind the nefarious plot was finally apprehended by the authorities."
+            },
+            {
+              "id": 41,
+              "word": "Obfuscate",
+              "meaning": "To make something unclear or difficult to understand.",
+              "antonym": "Clarify",
+              "synonym": "Confuse",
+              "example": "The politician's speech was designed to obfuscate his true intentions."
+            },
+            {
+              "id": 42,
+              "word": "Pernicious",
+              "meaning": "Having a harmful effect, especially in a gradual or subtle way.",
+              "antonym": "Beneficial",
+              "synonym": "Destructive",
+              "example": "The pernicious habit of smoking can lead to serious health issues."
+            },
+            {
+              "id": 43,
+              "word": "Quixotic",
+              "meaning": "Exceedingly idealistic; unrealistic and impractical.",
+              "antonym": "Practical",
+              "synonym": "Idealistic",
+              "example": "His quixotic dreams of changing the world often clashed with practical realities."
+            },
+            {
+              "id": 44,
+              "word": "Ravenous",
+              "meaning": "Extremely hungry; voracious.",
+              "antonym": "Satiated",
+              "synonym": "Famished",
+              "example": "After the long hike, they were ravenous and devoured their meal."
+            },
+            {
+              "id": 45,
+              "word": "Sycophant",
+              "meaning": "A person who acts obsequiously to gain favor from someone important.",
+              "antonym": "Independent",
+              "synonym": "Flatterer",
+              "example": "The sycophant praised the boss excessively in hopes of a promotion."
+            },
+            {
+              "id": 46,
+              "word": "Trepidation",
+              "meaning": "A feeling of fear or agitation about something that may happen.",
+              "antonym": "Confidence",
+              "synonym": "Apprehension",
+              "example": "With trepidation, she approached the haunted house on Halloween night."
+            },
+            {
+              "id": 47,
+              "word": "Ubiquitous",
+              "meaning": "Present, appearing, or found everywhere.",
+              "antonym": "Rare",
+              "synonym": "Omnipresent",
+              "example": "Smartphones have become ubiquitous in modern society."
+            },
+            {
+              "id": 48,
+              "word": "Voracious",
+              "meaning": "Having a very eager approach to an activity, often eating or consuming food in great quantities.",
+              "antonym": "Indifferent",
+              "synonym": "Insatiable",
+              "example": "The voracious reader finished the entire book series in a week."
+            },
+            {
+              "id": 49,
+              "word": "Wary",
+              "meaning": "Feeling or showing caution about possible dangers or problems.",
+              "antonym": "Trustful",
+              "synonym": "Cautious",
+              "example": "She was wary of strangers approaching her in the dark alley."
+            },
+            {
+              "id": 50,
+              "word": "Xenophobia",
+              "meaning": "An intense or irrational dislike or fear of people from other countries or cultures.",
+              "antonym": "Open-mindedness",
+              "synonym": "Racism",
+              "example": "Xenophobia can lead to harmful discrimination and prejudice."
+            }
+            ,
+                {
+                  "id": 51,
+                  "word": "Yield",
+                  "meaning": "To produce or provide, typically a result, profit, or crop.",
+                  "antonym": "Withhold",
+                  "synonym": "Generate",
+                  "example": "The hard work and dedication yielded positive outcomes."
+                },
+                {
+                  "id": 52,
+                  "word": "Zephyr",
+                  "meaning": "A soft, gentle breeze.",
+                  "antonym": "Gale",
+                  "synonym": "Breeze",
+                  "example": "Sitting by the seashore, they felt the cool zephyr on their faces."
+                },
+                {
+                  "id": 53,
+                  "word": "Amalgamate",
+                  "meaning": "To combine or unite to form a single organization or structure.",
+                  "antonym": "Divide",
+                  "synonym": "Merge",
+                  "example": "The two companies amalgamated to expand their market reach."
+                },
+                {
+                  "id": 54,
+                  "word": "Belligerent",
+                  "meaning": "Hostile and aggressive; eager to fight or engage in conflict.",
+                  "antonym": "Peaceful",
+                  "synonym": "Combative",
+                  "example": "The belligerent nation threatened war against its neighbors."
+                },
+                {
+                  "id": 55,
+                  "word": "Cacophony",
+                  "meaning": "A harsh, discordant mixture of sounds.",
+                  "antonym": "Harmony",
+                  "synonym": "Noise",
+                  "example": "The busy street was filled with a cacophony of car horns and construction noises."
+                },
+                {
+                  "id": 56,
+                  "word": "Debilitate",
+                  "meaning": "To make someone weak and infirm.",
+                  "antonym": "Strengthen",
+                  "synonym": "Weaken",
+                  "example": "The illness debilitated her to the point where she couldn't leave her bed."
+                },
+                {
+                  "id": 57,
+                  "word": "Elusive",
+                  "meaning": "Difficult to find, catch, or achieve.",
+                  "antonym": "Obvious",
+                  "synonym": "Evasive",
+                  "example": "The criminal proved elusive and managed to escape the authorities."
+                },
+                {
+                  "id": 58,
+                  "word": "Frenetic",
+                  "meaning": "Fast and energetic in a rather wild and uncontrolled way.",
+                  "antonym": "Calm",
+                  "synonym": "Frantic",
+                  "example": "The frenetic pace of the city can be overwhelming for some people."
+                },
+                {
+                  "id": 59,
+                  "word": "Galvanize",
+                  "meaning": "To shock or excite someone, typically into taking action.",
+                  "antonym": "Calm",
+                  "synonym": "Stimulate",
+                  "example": "The inspiring speech galvanized the audience to work towards a common goal."
+                },
+                {
+                  "id": 60,
+                  "word": "Hapless",
+                  "meaning": "Unfortunate; having bad luck.",
+                  "antonym": "Fortunate",
+                  "synonym": "Unlucky",
+                  "example": "The hapless traveler missed all of his flights due to a series of delays."
+                },
+                {
+                  "id": 61,
+                  "word": "Iconoclast",
+                  "meaning": "A person who challenges or criticizes traditional beliefs or institutions.",
+                  "antonym": "Conformist",
+                  "synonym": "Rebel",
+                  "example": "The artist was known as an iconoclast for his controversial and unconventional works."
+                },
+                {
+                  "id": 62,
+                  "word": "Jubilant",
+                  "meaning": "Feeling or expressing great joy and triumph.",
+                  "antonym": "Sad",
+                  "synonym": "Ecstatic",
+                  "example": "The team was jubilant after winning the championship."
+                },
+                {
+                  "id": 63,
+                  "word": "Kaleidoscope",
+                  "meaning": "A constantly changing pattern or sequence of elements.",
+                  "antonym": "Monotony",
+                  "synonym": "Variety",
+                  "example": "The city's cultural diversity creates a kaleidoscope of experiences."
+                },
+                {
+                  "id": 64,
+                  "word": "Lethargic",
+                  "meaning": "Feeling a lack of energy or enthusiasm; sluggish.",
+                  "antonym": "Energetic",
+                  "synonym": "Drowsy",
+                  "example": "After a long day of work, he felt lethargic and unmotivated to do anything."
+                },
+                {
+                  "id": 65,
+                  "word": "Munificent",
+                  "meaning": "Very generous; giving in a lavish or bountiful manner.",
+                  "antonym": "Stingy",
+                  "synonym": "Magnanimous",
+                  "example": "The munificent philanthropist donated a large sum to various charitable causes."
+                },
+                {
+                  "id": 66,
+                  "word": "Nefarious",
+                  "meaning": "Wicked, villainous, or criminal.",
+                  "antonym": "Virtuous",
+                  "synonym": "Evil",
+                  "example": "The mastermind behind the nefarious plot was finally apprehended by the authorities."
+                },
+                {
+                  "id": 67,
+                  "word": "Obfuscate",
+                  "meaning": "To make something unclear or difficult to understand.",
+                  "antonym": "Clarify",
+                  "synonym": "Confuse",
+                  "example": "The politician's speech was designed to obfuscate his true intentions."
+                },
+                {
+                  "id": 68,
+                  "word": "Pernicious",
+                  "meaning": "Having a harmful effect, especially in a gradual or subtle way.",
+                  "antonym": "Beneficial",
+                  "synonym": "Destructive",
+                  "example": "The pernicious habit of smoking can lead to serious health issues."
+                },
+                {
+                  "id": 69,
+                  "word": "Quixotic",
+                  "meaning": "Exceedingly idealistic; unrealistic and impractical.",
+                  "antonym": "Practical",
+                  "synonym": "Idealistic",
+                  "example": "His quixotic dreams of changing the world often clashed with practical realities."
+                },
+                {
+                  "id": 70,
+                  "word": "Ravenous",
+                  "meaning": "Extremely hungry; voracious.",
+                  "antonym": "Satiated",
+                  "synonym": "Famished",
+                  "example": "After the long hike, they were ravenous and devoured their meal."
+                }
+              
+                ,
+                    {
+                      "id": 71,
+                      "word": "Sycophant",
+                      "meaning": "A person who acts obsequiously to gain favor from someone important.",
+                      "antonym": "Independent",
+                      "synonym": "Flatterer",
+                      "example": "The sycophant praised the boss excessively in hopes of a promotion."
+                    },
+                    {
+                      "id": 72,
+                      "word": "Trepidation",
+                      "meaning": "A feeling of fear or agitation about something that may happen.",
+                      "antonym": "Confidence",
+                      "synonym": "Apprehension",
+                      "example": "With trepidation, she approached the haunted house on Halloween night."
+                    },
+                    {
+                      "id": 73,
+                      "word": "Ubiquitous",
+                      "meaning": "Present, appearing, or found everywhere.",
+                      "antonym": "Rare",
+                      "synonym": "Omnipresent",
+                      "example": "Smartphones have become ubiquitous in modern society."
+                    },
+                    {
+                      "id": 74,
+                      "word": "Voracious",
+                      "meaning": "Having a very eager approach to an activity, often eating or consuming food in great quantities.",
+                      "antonym": "Indifferent",
+                      "synonym": "Insatiable",
+                      "example": "The voracious reader finished the entire book series in a week."
+                    },
+                    {
+                      "id": 75,
+                      "word": "Wary",
+                      "meaning": "Feeling or showing caution about possible dangers or problems.",
+                      "antonym": "Trustful",
+                      "synonym": "Cautious",
+                      "example": "She was wary of strangers approaching her in the dark alley."
+                    },
+                    {
+                      "id": 76,
+                      "word": "Xenophobia",
+                      "meaning": "An intense or irrational dislike or fear of people from other countries or cultures.",
+                      "antonym": "Open-mindedness",
+                      "synonym": "Racism",
+                      "example": "Xenophobia can lead to harmful discrimination and prejudice."
+                    },
+                    {
+                      "id": 77,
+                      "word": "Yearn",
+                      "meaning": "To have an intense feeling of longing for something, typically something that one has lost or been separated from.",
+                      "antonym": "Refrain",
+                      "synonym": "Long",
+                      "example": "He yearned for the days when he was a carefree child."
+                    },
+                    {
+                      "id": 78,
+                      "word": "Zest",
+                      "meaning": "Great enthusiasm and energy.",
+                      "antonym": "Apathy",
+                      "synonym": "Zeal",
+                      "example": "She tackled every task with zest and determination."
+                    },
+                    {
+                      "id": 79,
+                      "word": "Avarice",
+                      "meaning": "Extreme greed for wealth or material gain.",
+                      "antonym": "Generosity",
+                      "synonym": "Greed",
+                      "example": "His avarice led him to prioritize money over personal relationships."
+                    },
+                    {
+                      "id": 80,
+                      "word": "Benevolent",
+                      "meaning": "Kind and generous.",
+                      "antonym": "Malevolent",
+                      "synonym": "Generous",
+                      "example": "The benevolent stranger donated money to the charity."
+                    },
+                    {
+                      "id": 81,
+                      "word": "Capricious",
+                      "meaning": "Given to sudden and unaccountable changes of mood or behavior.",
+                      "antonym": "Consistent",
+                      "synonym": "Whimsical",
+                      "example": "Her capricious nature made it difficult to predict her reactions."
+                    },
+                    {
+                      "id": 82,
+                      "word": "Diligent",
+                      "meaning": "Showing careful and persistent effort.",
+                      "antonym": "Lazy",
+                      "synonym": "Industrious",
+                      "example": "The diligent student studied for hours every day."
+                    },
+                    {
+                      "id": 83,
+                      "word": "Eloquent",
+                      "meaning": "Fluent or persuasive in speaking or writing.",
+                      "antonym": "Inarticulate",
+                      "synonym": "Articulate",
+                      "example": "The politician delivered an eloquent speech that moved the audience."
+                    },
+                    {
+                      "id": 84,
+                      "word": "Formidable",
+                      "meaning": "Inspiring fear or respect through being impressively powerful or capable.",
+                      "antonym": "Easy",
+                      "synonym": "Daunting",
+                      "example": "The team faced a formidable opponent in the championship match."
+                    },
+                    {
+                      "id": 85,
+                      "word": "Gregarious",
+                      "meaning": "Fond of company; sociable.",
+                      "antonym": "Introverted",
+                      "synonym": "Sociable",
+                      "example": "John is a gregarious person who enjoys attending parties."
+                    },
+                    {
+                      "id": 86,
+                      "word": "Hypothetical",
+                      "meaning": "Based on or serving as a hypothesis; assumed or supposed.",
+                      "antonym": "Actual",
+                      "synonym": "Speculative",
+                      "example": "Let's consider a hypothetical situation where money is no object."
+                    },
+                    {
+                      "id": 87,
+                      "word": "Impartial",
+                      "meaning": "Treating all parties equally; fair and just.",
+                      "antonym": "Biased",
+                      "synonym": "Unbiased",
+                      "example": "The judge remained impartial throughout the trial."
+                    },
+                    {
+                      "id": 88,
+                      "word": "Jovial",
+                      "meaning": "Cheerful and friendly.",
+                      "antonym": "Gloomy",
+                      "synonym": "Merry",
+                      "example": "The jovial host greeted each guest with a warm smile."
+                    },
+                    {
+                      "id": 89,
+                      "word": "Keen",
+                      "meaning": "Having or showing eagerness or enthusiasm.",
+                      "antonym": "Indifferent",
+                      "synonym": "Enthusiastic",
+                      "example": "She has a keen interest in photography."
+                    },
+                    {
+                      "id": 90,
+                      "word": "Lucid",
+                      "meaning": "Clear and easily understood; rational and sane.",
+                      "antonym": "Confused",
+                      "synonym": "Clear",
+                      "example": "The professor gave a lucid explanation of the complex topic."
+                    }
+                  
+                  
+          
+      
+
+]
