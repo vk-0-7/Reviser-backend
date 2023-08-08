@@ -58,7 +58,7 @@ exports.Questioncreator =  (req, res) => {
 exports.QuestionReceiver= async (req,res)=>{
   try {
     const Data = await QuestionData.find();
-    res.status(201).json(Data);
+    res.status(200).json(Data);
 
   } catch (error) {
     // console.log('error receiving data',error)
