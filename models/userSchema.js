@@ -10,10 +10,14 @@ const userSchema=new mongoose.Schema({
 )
 const User=new mongoose.model('User',userSchema)
 
-module.exports=User;
 
+const subscribeSchema = new mongoose.Schema({
+    email: String,
+});
 
+const Subscribe = new mongoose.model("Subscribe", subscribeSchema);
 
+module.exports={User,Subscribe};
 
 
 

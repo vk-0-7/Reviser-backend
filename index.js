@@ -1,20 +1,20 @@
 
-const express=require('express');
+const express = require('express');
 
-const cors=require('cors');
+const cors = require('cors');
 // import dotenv from "dotenv";
 require('dotenv').config();
 // dotenv.config();
 require('./db/conn.js')
-const mongoose=require('mongoose');
+const mongoose = require('mongoose');
 const DATABASE = process.env.DATABASE;
 const EMAIL = process.env.EMAIL;
 const PASSWORD = process.env.PASSWORD;
 // import nodemailer from "nodemailer";
-const nodemailer=require('nodemailer')
-const userrouter=require('./routes/user.js');
-const dictrouter=require('./routes/dictionary.js');
-// const {storesentdata}=require('./controllers/antosynocontroller.js')
+const nodemailer = require('nodemailer')
+const userrouter = require('./routes/user.js');
+const dictrouter = require('./routes/dictionary.js');
+const {storesentdata}=require('./controllers/antosynocontroller.js')
 // import  {getallsentwords}  from "./controllers/wordcontroller.js";
 
 const app = express();
@@ -26,7 +26,7 @@ app.use(dictrouter);
 
 // let startword=0;
 
-const timeInterval =  10* 1000;
+const timeInterval = 60*60* 1000;
 
 // setInterval(() => {
 //   sendmail();
@@ -39,13 +39,13 @@ const timeInterval =  10* 1000;
 
 const sendmail = async () => {
 
-  // const lastIndex = await Index.find();
-  // let startword = lastIndex[lastIndex.length - 1]?.num;
-   let startword=0;
+  const lastIndex = await Index.find();
+  let startword = lastIndex[lastIndex.length - 1]?.num;
+  // let startword = 0;
   try {
     console.log("sendmail called");
-    const recipients = await Subscribe.find();
-  //  console.log(recipients);
+    // const recipients = await Subscribe.find();
+    //  console.log(recipients);
     // console.log(antData[0].email)
     // const allwords =await allData.find();
 
@@ -54,79 +54,79 @@ const sendmail = async () => {
     const allData = await allDataCollection.find().toArray();
     // console.log('All data from the collection:', allData);
 
-   
+
     // const allsynData = await AdSynonym.find();
     // console.log(allwords);
     // console.log(startword);
     // if (
     //   startword + 2 > allwords.length 
-     
+
     // ) {
     //   startword = 0;
     // }
     // console.log(startword)
 
-    const filtereddata =allData.slice(startword, startword + 2);
-     storesentdata(filtereddata[0]);
-     storesentdata(filtereddata[1]);
+    const filtereddata = allData.slice(startword, startword + 2);
+    storesentdata(filtereddata[0]);
+    storesentdata(filtereddata[1]);
     // console.log(filtereddata);
-    const emailHTML = `
-        <html> 
-          <body>
-               
-            <h2> Here are 2 word of the day</h2>
-            <h4>Word:${filtereddata[0]?.word}</h4>
-            <h4>Meaning:${filtereddata[0]?.meaning}</h4>
-            <h4>Antonym:${filtereddata[0]?.antonym}</h4>
-            <h4>Synonym:${filtereddata[0]?.synonym}</h4>
-            <h4>Example:${filtereddata[0]?.example}</h4>
-            <br/>
-             
-            <h4>Word:${filtereddata[1]?.word}</h4>
-            <h4>Meaning:${filtereddata[1]?.meaning}</h4>
-            <h4>Antonym:${filtereddata[1]?.antonym}</h4>
-            <h4>Synonym:${filtereddata[1]?.synonym}</h4>
-            <h4>Example:${filtereddata[1]?.example}</h4>
-          </body>
-        </html>
-      `;
+    // const emailHTML = `
+    //     <html> 
+    //       <body>
 
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: EMAIL,
-        pass: PASSWORD,
-      },
-    });
+    //         <h2> Here are 2 word of the day</h2>
+    //         <h4>Word:${filtereddata[0]?.word}</h4>
+    //         <h4>Meaning:${filtereddata[0]?.meaning}</h4>
+    //         <h4>Antonym:${filtereddata[0]?.antonym}</h4>
+    //         <h4>Synonym:${filtereddata[0]?.synonym}</h4>
+    //         <h4>Example:${filtereddata[0]?.example}</h4>
+    //         <br/>
 
-    for (let i = 0; i < recipients.length; i++) {
-      const recipient = recipients[i].email;
+    //         <h4>Word:${filtereddata[1]?.word}</h4>
+    //         <h4>Meaning:${filtereddata[1]?.meaning}</h4>
+    //         <h4>Antonym:${filtereddata[1]?.antonym}</h4>
+    //         <h4>Synonym:${filtereddata[1]?.synonym}</h4>
+    //         <h4>Example:${filtereddata[1]?.example}</h4>
+    //       </body>
+    //     </html>
+    //   `;
 
-      const mailOptions = {
-        from: "vivekr4400@gmail.com",
-        to: recipient,
-        subject: "Word of the Day",
-        html: emailHTML,
-      };
+    // const transporter = nodemailer.createTransport({
+    //   service: "gmail",
+    //   auth: {
+    //     user: EMAIL,
+    //     pass: PASSWORD,
+    //   },
+    // });
 
-      transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-          console.log("error", error);
-        } else {
-          console.log("Email sent" + info.response);
-          // res.status(201).json({ status: 201, info });
-        }
-      });
-    }
+    // for (let i = 0; i < recipients.length; i++) {
+    //   const recipient = recipients[i].email;
+
+    //   const mailOptions = {
+    //     from: "vivekr4400@gmail.com",
+    //     to: recipient,
+    //     subject: "Word of the Day",
+    //     html: emailHTML,
+    //   };
+
+    //   transporter.sendMail(mailOptions, (error, info) => {
+    //     if (error) {
+    //       console.log("error", error);
+    //     } else {
+    //       console.log("Email sent" + info.response);
+    //       // res.status(201).json({ status: 201, info });
+    //     }
+    //   });
+    // }
   }
-   catch (error) {
-     
+  catch (error) {
+
     console.log(" error occured in email send function", error);
   }
 
-  // startword += 2;
+  startword += 2;
 
-  // getIndex(startword);
+  getIndex(startword);
 };
 
 
@@ -154,42 +154,6 @@ const getIndex = (currval) => {
 
 
 
-
-
-// //  const num=startword;
-
-// // app.post("/login" ,userlogin)
-
-// //Register
-
-// //subscribe
-
-const subscribeSchema = new mongoose.Schema({
-  email: String,
-});
-
-const Subscribe = new mongoose.model("Subscribe", subscribeSchema);
-
-app.post("/subscribe", (req, res) => {
-  const { email } = req.body;
-  console.log(email);
-
-  //   console.log(email);
-  Subscribe.findOne({ email: email }, (err, user) => {
-    if (user) {
-      res.send({ message: "user already subscribed" });
-    } else {
-      const subscribe = new Subscribe({ email });
-      subscribe.save((err) => {
-        if (err) {
-          res.send(err);
-        } else {
-          res.send({ message: "Successfully Subscribed " });
-        }
-      });
-    }
-  });
-});
 
 // // adding antonyms
 

@@ -9,4 +9,7 @@ router.post("/login", controller.userlogin);
 
 router.post("/register",controller.register);
 
+router.post('/subscribe',controller.usersubscribe)
+router.get('/getsubscriber',controller.getsubsciber)
+
 module.exports=router;

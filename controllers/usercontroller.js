@@ -1,5 +1,6 @@
 
-const User = require("../models/userSchema.js");
+const {User,Subscribe} = require("../models/userSchema.js");
+
 
 // Login Api
 
@@ -48,3 +49,52 @@ exports.register = (req, res) => {
     }
   );
 };
+
+exports.usersubscribe=(req,res)=>{
+  try {
+     const {email}=req.body;
+     Subscribe.findOne({ email: email }, (err, user) => {
+      if (user) {
+        res.send({ message: "user already subscribed" });
+      } else {
+        const subscribe = new Subscribe({ email });
+        subscribe.save((err) => {
+          if (err) {
+            res.send({message:"error while subscribing"});
+          } else {
+            res.send({ message: "Successfully Subscribed " });
+          }
+        });
+      }
+    });
+  } catch (error) {
+    console.log('error while subscribing',error)
+  }
+}
+
+
+exports.getsubsciber=(req,res)=>{
+  try {
+       const email=req.query.email;
+      //  console.log(req.query.email);
+      Subscribe.findOne({email:email},(err,user)=>{
+        if(err){
+          res.status(404).json(err)
+          
+        }
+        else if (user){
+          res.status(200).json(user)
+        }
+
+        else{
+          res.status(404).send({message:"user not subscribed"})
+        }
+      })
+
+
+  } catch (error) {
+       console.log('error finding Subscribers',error)
+  }  
+
+}
+
