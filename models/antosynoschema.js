@@ -2,7 +2,10 @@ const mongoose = require("mongoose");
 
 const antoSchema = new mongoose.Schema({
   word: String,
+  meaning:String,
+  synonym:String,
   antonym: String,
+  example:String,
   email: String,
 });
 

@@ -68,16 +68,20 @@ exports.QuestionReceiver= async (req,res)=>{
 
 
 
-exports.addantonymsFunc = (req, res) => {
-  const { word, antonym, email } = req.body
+exports.addwordsFunc = async(req, res) => {
+    try {
+      const { word,meaning, antonym,synonym,example, email } = req.body
 
-  const dictionary = new Dictionary({
-    word, antonym, email
-  })
-  dictionary.save(err => {
-    if (err) res.send(err)
-    else res.send({ message: "New word Added" })
-  })
+      const dictionary = new Dictionary({
+        word,meaning, antonym,synonym,example, email
+      })
+    const data= await dictionary.save();
+     res.status(201).json({data:data})
+
+    } catch (error) {
+      res.status(500).json({message:"error adding words"})
+    }
+    
 
 }
 

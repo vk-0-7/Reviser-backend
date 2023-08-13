@@ -10,7 +10,7 @@ router.get("/getallsentword", controller.getallsentwords);
 router.post("/createallsentword", controller.storesentdata);
 
 
-router.post("/addantonyms", controller.addantonymsFunc);
+router.post("/addwords", controller.addwordsFunc);
 
 router.get("/data/getantonyms", controller.getantoFunc);
 
