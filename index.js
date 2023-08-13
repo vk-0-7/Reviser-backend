@@ -26,12 +26,12 @@ app.use(dictrouter);
 
 // let startword=0;
 
-const timeInterval = 60*60* 1000;
+const timeInterval = 5*60* 1000;
 
-// setInterval(() => {
-//   sendmail();
-//   // getallsentwords()
-// }, timeInterval);
+setInterval(() => {
+  sendmail();
+  // getallsentwords()
+}, timeInterval);
 
 
 
@@ -44,14 +44,15 @@ const sendmail = async () => {
   // let startword = 0;
   try {
     console.log("sendmail called");
-    // const recipients = await Subscribe.find();
+    const recipients = await Subscribe.find();
+
     //  console.log(recipients);
     // console.log(antData[0].email)
     // const allwords =await allData.find();
 
-    const db = mongoose.connection.db;
-    const allDataCollection = db.collection('allData');
-    const allData = await allDataCollection.find().toArray();
+    // const db = mongoose.connection.db;
+    // const allDataCollection = db.collection('allData');
+    // const allData = await allDataCollection.find().toArray();
     // console.log('All data from the collection:', allData);
 
 
@@ -66,67 +67,77 @@ const sendmail = async () => {
     // }
     // console.log(startword)
 
-    const filtereddata = allData.slice(startword, startword + 2);
-    storesentdata(filtereddata[0]);
-    storesentdata(filtereddata[1]);
+    // const filtereddata = allData.slice(startword, startword + 2);
+    // storesentdata(filtereddata[0]);
+    // storesentdata(filtereddata[1]);
     // console.log(filtereddata);
-    // const emailHTML = `
-    //     <html> 
-    //       <body>
+    const emailHTML = `
+        <html> 
+          // <body>
 
-    //         <h2> Here are 2 word of the day</h2>
-    //         <h4>Word:${filtereddata[0]?.word}</h4>
-    //         <h4>Meaning:${filtereddata[0]?.meaning}</h4>
-    //         <h4>Antonym:${filtereddata[0]?.antonym}</h4>
-    //         <h4>Synonym:${filtereddata[0]?.synonym}</h4>
-    //         <h4>Example:${filtereddata[0]?.example}</h4>
-    //         <br/>
+          //   <h2> Here are 2 word of the day</h2>
+          //   <h4>Word:${filtereddata[0]?.word}</h4>
+          //   <h4>Meaning:${filtereddata[0]?.meaning}</h4>
+          //   <h4>Antonym:${filtereddata[0]?.antonym}</h4>
+          //   <h4>Synonym:${filtereddata[0]?.synonym}</h4>
+          //   <h4>Example:${filtereddata[0]?.example}</h4>
+          //   <br/>
 
-    //         <h4>Word:${filtereddata[1]?.word}</h4>
-    //         <h4>Meaning:${filtereddata[1]?.meaning}</h4>
-    //         <h4>Antonym:${filtereddata[1]?.antonym}</h4>
-    //         <h4>Synonym:${filtereddata[1]?.synonym}</h4>
-    //         <h4>Example:${filtereddata[1]?.example}</h4>
-    //       </body>
-    //     </html>
-    //   `;
+          //   <h4>Word:${filtereddata[1]?.word}</h4>
+          //   <h4>Meaning:${filtereddata[1]?.meaning}</h4>
+          //   <h4>Antonym:${filtereddata[1]?.antonym}</h4>
+          //   <h4>Synonym:${filtereddata[1]?.synonym}</h4>
+          //   <h4>Example:${filtereddata[1]?.example}</h4>
+          // </body>
+          // <body>
 
-    // const transporter = nodemailer.createTransport({
-    //   service: "gmail",
-    //   auth: {
-    //     user: EMAIL,
-    //     pass: PASSWORD,
-    //   },
-    // });
+            <h2> Here are 2 word of the day</h2>
+            <h4>Word</h4>
+           
+            <br/>
 
-    // for (let i = 0; i < recipients.length; i++) {
-    //   const recipient = recipients[i].email;
+            <h4>Word:</h4>
+           
+          </body>
+        </html>
+      `;
 
-    //   const mailOptions = {
-    //     from: "vivekr4400@gmail.com",
-    //     to: recipient,
-    //     subject: "Word of the Day",
-    //     html: emailHTML,
-    //   };
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: EMAIL,
+        pass: PASSWORD,
+      },
+    });
 
-    //   transporter.sendMail(mailOptions, (error, info) => {
-    //     if (error) {
-    //       console.log("error", error);
-    //     } else {
-    //       console.log("Email sent" + info.response);
-    //       // res.status(201).json({ status: 201, info });
-    //     }
-    //   });
-    // }
+    for (let i = 0; i < recipients.length; i++) {
+      const recipient = recipients[i].email;
+
+      const mailOptions = {
+        from: "vivekr4400@gmail.com",
+        to: recipient,
+        subject: "Word of the Day",
+        html: emailHTML,
+      };
+
+      transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+          console.log("error", error);
+        } else {
+          console.log("Email sent" + info.response);
+          // res.status(201).json({ status: 201, info });
+        }
+      });
+    }
   }
   catch (error) {
 
     console.log(" error occured in email send function", error);
   }
 
-  startword += 2;
+  // startword += 2;
 
-  getIndex(startword);
+  // getIndex(startword);
 };
 
 
