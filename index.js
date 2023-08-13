@@ -10,6 +10,7 @@ const mongoose = require('mongoose');
 const DATABASE = process.env.DATABASE;
 const EMAIL = process.env.EMAIL;
 const PASSWORD = process.env.PASSWORD;
+const {Subscribe} =require('./models/userSchema.js')
 // import nodemailer from "nodemailer";
 const nodemailer = require('nodemailer')
 const userrouter = require('./routes/user.js');
@@ -26,7 +27,7 @@ app.use(dictrouter);
 
 // let startword=0;
 
-const timeInterval = 5*60* 1000;
+const timeInterval = 60* 1000;
 
 setInterval(() => {
   sendmail();
@@ -71,9 +72,7 @@ const sendmail = async () => {
     // storesentdata(filtereddata[0]);
     // storesentdata(filtereddata[1]);
     // console.log(filtereddata);
-    const emailHTML = `
-        <html> 
-          // <body>
+    // <body>
 
           //   <h2> Here are 2 word of the day</h2>
           //   <h4>Word:${filtereddata[0]?.word}</h4>
@@ -89,7 +88,10 @@ const sendmail = async () => {
           //   <h4>Synonym:${filtereddata[1]?.synonym}</h4>
           //   <h4>Example:${filtereddata[1]?.example}</h4>
           // </body>
-          // <body>
+    const emailHTML = `
+        <html> 
+          
+          <body>
 
             <h2> Here are 2 word of the day</h2>
             <h4>Word</h4>
@@ -233,6 +235,6 @@ app.get("/", (req, res) => {
 //   }
 // });
 
-app.listen(process.env.PORT || 9000, () => {
+app.listen(process.env.PORT || 7000, () => {
   console.log("app is running on 9000");
 });
