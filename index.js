@@ -27,7 +27,7 @@ app.use(dictrouter);
 
 // let startword=0;
 
-const timeInterval = 60* 1000;
+const timeInterval = 5*60*60* 1000;
 
 setInterval(() => {
   sendmail();
@@ -95,7 +95,8 @@ const sendmail = async () => {
 
             <h2> Here are 2 word of the day</h2>
             <h4>Word</h4>
-           
+            <h4>Test word</h4>
+             
             <br/>
 
             <h4>Word:</h4>
