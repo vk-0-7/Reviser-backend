@@ -1,6 +1,6 @@
 
 const {User,Subscribe} = require("../models/userSchema.js");
-
+const sendnewemail=require('../utils/sendemail.js')
 
 // Login Api
 
@@ -58,11 +58,14 @@ exports.usersubscribe=(req,res)=>{
         res.status(404).send({ message: "user already subscribed" });
       } else {
         const subscribe = new Subscribe({ email });
-        subscribe.save((err) => {
-          if (err) {
-            res.send({message:"error while subscribing"});
-          } else {
+        subscribe.save((user) => {
+          if (user) {
             res.send({ message: "Successfully Subscribed " });
+            sendnewemail(email)
+          } else {
+            res.send({message:"error while subscribing"});
+            
+            // console.log();
           }
         });
       }

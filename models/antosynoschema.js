@@ -12,13 +12,7 @@ const antoSchema = new mongoose.Schema({
 const Dictionary = new mongoose.model("Dictionary", antoSchema);
 // module.exports=Dictionary;
 
-const synoSchema = new mongoose.Schema({
-  word: String,
-  synonym: String,
-  email: String,
-});
-
-const Synonym = new mongoose.model("Synonym", synoSchema);
 
 
-module.exports={Dictionary,Synonym};
+
+module.exports={Dictionary};

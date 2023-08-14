@@ -1,8 +1,23 @@
 // import { Dictionary ,Synonym,Sentdata} from "../models/userSchema.js"
 const { Dictionary, Synonym } = require('../models/antosynoschema.js')
 const  {Sentdata,QuestionData} = require('../models/wordSchema.js')
+const mongoose =require('mongoose')
 // const QuestionData=require('../models/wordSchema.js')
 
+exports.getallwords = async (req, res) => {
+
+  try {
+    const db = mongoose.connection.db;
+    const allDataCollection = db.collection('allData');
+    const allData = await allDataCollection.find().toArray();
+    res.status(200).json(allData)
+
+
+  } catch (error) {
+    console.log('error receiving data',error)
+    res.status(404).json(error)
+  }
+}
 exports.getallsentwords = async (req, res) => {
 
   try {
@@ -68,7 +83,7 @@ exports.QuestionReceiver= async (req,res)=>{
 
 
 
-exports.addwordsFunc = async(req, res) => {
+exports.addClientWords = async(req, res) => {
     try {
       const { word,meaning, antonym,synonym,example, email } = req.body
 
@@ -86,10 +101,10 @@ exports.addwordsFunc = async(req, res) => {
 }
 
 
-exports.getantoFunc = async (req, res) => {
+exports.getClientWords = async (req, res) => {
   try {
-    const antData = await Dictionary.find();
-    res.status(201).json(antData);
+    const clientWords = await Dictionary.find();
+    res.status(201).json(clientWords);
     //   console.log(antData);
   } catch (error) {
     res.status(500).json(error);

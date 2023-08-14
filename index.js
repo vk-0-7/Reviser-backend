@@ -25,14 +25,16 @@ app.use(cors());
 app.use(userrouter);
 app.use(dictrouter);
 
+
+
 // let startword=0;
 
-const timeInterval = 5*60*60* 1000;
+const timeInterval = 60* 1000;
 
-setInterval(() => {
-  sendmail();
-  // getallsentwords()
-}, timeInterval);
+// setInterval(() => {
+//   sendmail();
+//   // getallsentwords()
+// }, timeInterval);
 
 
 
@@ -51,9 +53,9 @@ const sendmail = async () => {
     // console.log(antData[0].email)
     // const allwords =await allData.find();
 
-    // const db = mongoose.connection.db;
-    // const allDataCollection = db.collection('allData');
-    // const allData = await allDataCollection.find().toArray();
+    const db = mongoose.connection.db;
+    const allDataCollection = db.collection('allData');
+    const allData = await allDataCollection.find().toArray();
     // console.log('All data from the collection:', allData);
 
 
@@ -68,40 +70,30 @@ const sendmail = async () => {
     // }
     // console.log(startword)
 
-    // const filtereddata = allData.slice(startword, startword + 2);
-    // storesentdata(filtereddata[0]);
-    // storesentdata(filtereddata[1]);
+    const filtereddata = allData.slice(startword, startword + 2);
+    storesentdata(filtereddata[0]);
+    storesentdata(filtereddata[1]);
     // console.log(filtereddata);
-    // <body>
-
-          //   <h2> Here are 2 word of the day</h2>
-          //   <h4>Word:${filtereddata[0]?.word}</h4>
-          //   <h4>Meaning:${filtereddata[0]?.meaning}</h4>
-          //   <h4>Antonym:${filtereddata[0]?.antonym}</h4>
-          //   <h4>Synonym:${filtereddata[0]?.synonym}</h4>
-          //   <h4>Example:${filtereddata[0]?.example}</h4>
-          //   <br/>
-
-          //   <h4>Word:${filtereddata[1]?.word}</h4>
-          //   <h4>Meaning:${filtereddata[1]?.meaning}</h4>
-          //   <h4>Antonym:${filtereddata[1]?.antonym}</h4>
-          //   <h4>Synonym:${filtereddata[1]?.synonym}</h4>
-          //   <h4>Example:${filtereddata[1]?.example}</h4>
-          // </body>
+   
     const emailHTML = `
         <html> 
           
-          <body>
+        <body>
 
-            <h2> Here are 2 word of the day</h2>
-            <h4>Word</h4>
-            <h4>Test word</h4>
-             
-            <br/>
+          <h2> Here are 2 word of the day</h2>
+          <h4>Word:${filtereddata[0]?.word}</h4>
+          <h4>Meaning:${filtereddata[0]?.meaning}</h4>
+          <h4>Antonym:${filtereddata[0]?.antonym}</h4>
+          <h4>Synonym:${filtereddata[0]?.synonym}</h4>
+          <h4>Example:${filtereddata[0]?.example}</h4>
+          <br/>
 
-            <h4>Word:</h4>
-           
-          </body>
+          <h4>Word:${filtereddata[1]?.word}</h4>
+          <h4>Meaning:${filtereddata[1]?.meaning}</h4>
+          <h4>Antonym:${filtereddata[1]?.antonym}</h4>
+          <h4>Synonym:${filtereddata[1]?.synonym}</h4>
+          <h4>Example:${filtereddata[1]?.example}</h4>
+        </body>
         </html>
       `;
 
@@ -138,9 +130,9 @@ const sendmail = async () => {
     console.log(" error occured in email send function", error);
   }
 
-  // startword += 2;
+  startword += 2;
 
-  // getIndex(startword);
+  getIndex(startword);
 };
 
 
@@ -236,6 +228,6 @@ app.get("/", (req, res) => {
 //   }
 // });
 
-app.listen(process.env.PORT || 7000, () => {
+app.listen(process.env.PORT || 9000, () => {
   console.log("app is running on 9000");
 });

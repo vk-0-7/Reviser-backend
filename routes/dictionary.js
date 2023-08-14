@@ -5,14 +5,16 @@ const controller = require("../controllers/antosynocontroller.js");
 
 const router = new express.Router();
 
+router.get("/getallwords", controller.getallwords);
+
 router.get("/getallsentword", controller.getallsentwords);
 
 router.post("/createallsentword", controller.storesentdata);
 
 
-router.post("/addwords", controller.addwordsFunc);
+router.post("/addyourwords", controller.addClientWords);
 
-router.get("/data/getantonyms", controller.getantoFunc);
+router.get("/getyourwords", controller.getClientWords);
 
 router.post("/addsynonyms", controller.addSynofunc);
 
