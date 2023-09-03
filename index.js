@@ -10,12 +10,12 @@ const mongoose = require('mongoose');
 const DATABASE = process.env.DATABASE;
 const EMAIL = process.env.EMAIL;
 const PASSWORD = process.env.PASSWORD;
-const {Subscribe} =require('./models/userSchema.js')
+const { Subscribe } = require('./models/userSchema.js')
 // import nodemailer from "nodemailer";
 const nodemailer = require('nodemailer')
 const userrouter = require('./routes/user.js');
 const dictrouter = require('./routes/dictionary.js');
-const {storesentdata}=require('./controllers/antosynocontroller.js')
+const { storesentdata } = require('./controllers/antosynocontroller.js')
 // import  {getallsentwords}  from "./controllers/wordcontroller.js";
 
 const app = express();
@@ -29,7 +29,7 @@ app.use(dictrouter);
 
 // let startword=0;
 
-const timeInterval = 60* 1000;
+const timeInterval = 60 * 1000;
 
 // setInterval(() => {
 //   sendmail();
@@ -74,7 +74,7 @@ const sendmail = async () => {
     storesentdata(filtereddata[0]);
     storesentdata(filtereddata[1]);
     // console.log(filtereddata);
-   
+
     const emailHTML = `
         <html> 
           
